@@ -1,13 +1,13 @@
 import "package:flutter/material.dart";
 
 void main() {
-  runApp(MaterialApp(home: Scaffold(body: GradientContainer())));
+  runApp(const MaterialApp(home: Scaffold(body: GradientContainer())));
 }
 
-// custom widget
-
 class GradientContainer extends StatelessWidget {
-  @override // override all the features from Gradient
+  const GradientContainer({super.key});
+
+  @override // override all the features from StatelessWidget
   Widget build(context) {
     return Container(
       decoration: const BoxDecoration(
