@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 import "package:intro_to_dart_and_flutter/basic_text.dart";
 
+const startAlign = Alignment.topCenter;
+const endAlign = Alignment.bottomCenter;
+
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
@@ -13,8 +16,8 @@ class GradientContainer extends StatelessWidget {
             Color.fromARGB(255, 61, 6, 2),
             Color.fromARGB(255, 126, 5, 1),
           ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+          begin: startAlign,
+          end: endAlign,
         ),
       ),
       child: const Center(child: BasicText()),
