@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:intro_to_dart_and_flutter/basic_text.dart";
+// import "package:intro_to_dart_and_flutter/basic_text.dart";
 
 // variables
 const startAlign = Alignment.topCenter;
@@ -19,7 +19,7 @@ class GradientContainer extends StatelessWidget {
           end: endAlign,
         ),
       ),
-      child: const Center(child: BasicText("Hello world")),
+      child: Center(child: Image.asset('assets/images/dice-1.png')),
     );
   }
 }
