@@ -12,7 +12,9 @@ class DiceClickElement extends StatefulWidget {
 class _DiceClickElementState extends State<DiceClickElement> {
   String diceImage = 'assets/images/dice-1.png';
   void rollDice() {
-    diceImage = 'assets/images/dice-3.png';
+    setState(() {
+      diceImage = 'assets/images/dice-3.png';
+    });
   }
 
   @override
