@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "dart:math";
 
+final randomizer = Random();
+
 class DiceClickElement extends StatefulWidget {
   const DiceClickElement({super.key});
 
@@ -11,12 +13,10 @@ class DiceClickElement extends StatefulWidget {
 }
 
 class _DiceClickElementState extends State<DiceClickElement> {
-  String diceImage = 'assets/images/dice-1.png';
-
+  int diceNumber = 1;
   void rollDice() {
-    int diceNumber = Random().nextInt(6) + 1;
     setState(() {
-      diceImage = 'assets/images/dice-$diceNumber.png';
+      diceNumber = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -25,7 +25,7 @@ class _DiceClickElementState extends State<DiceClickElement> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset(diceImage, width: 200),
+        Image.asset('assets/images/dice-$diceNumber.png', width: 200),
         SizedBox(height: 20),
         TextButton(
           onPressed: rollDice,
